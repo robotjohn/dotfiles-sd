@@ -62,6 +62,11 @@ systemctl --user status podman.socket
 # pip3 install podman-compose
 # pip3 install git+https://github.com/containers/podman-compose.git@devel
 
+# [WORKAROUND] Unable to build PyYAML < 6.0.1 from source or sdist
+# https://github.com/yaml/pyyaml/issues/736
+# create a constraint file that limits the Cython version to one that should work
+echo 'Cython < 3.0' > /tmp/constraint.txt
+PIP_CONSTRAINT=/tmp/constraint.txt pip install 'PyYAML==5.4.1'
 
 # https://github.com/containers/podman/issues/11822#issuecomment-932289679
 pip3 install docker-compose==1.29.2
