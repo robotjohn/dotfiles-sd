@@ -35,7 +35,7 @@ sudo pacman-key --init
 sudo pacman-key --populate archlinux
 sudo pacman -Syy
 # install packages
-sudo pacman -S --noconfirm networkmanager-openvpn podman podman-docker podman-dnsname python-pip
+sudo pacman -S --noconfirm networkmanager-openvpn podman podman-docker podman-dnsname python-pip php composer
 sudo touch /etc/subuid
 sudo usermod --add-subuids 10000-75535 deck
 sudo touch /etc/subgid
