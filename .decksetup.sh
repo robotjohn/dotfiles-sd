@@ -75,6 +75,13 @@ pip3 install docker-compose==1.29.2
 flatpak update -y
 flatpak install -y org.chromium.Chromium
 flatpak install -y com.visualstudio.code
+flatpak install -y org.mozilla.firefox
+flatpak install -y com.bitwarden.desktop
+flatpak install -y com.github.debauchee.barrier
+flatpak install -y io.dbeaver.dbeavercommunity
+flatpak install -y com.github.tchx84.flatseal
+flatpak install -y rest.insomnia.insomnia
+flatpak install -y org.zealdocs.zeal.desktop
 # flatpak install -y org.godotengine.Godot
 # xdg-settings set default-web-browser org.chromium.Chromium.desktop
 
@@ -109,7 +116,7 @@ echo
 echo
 echo 'Next:'
 echo
-echo '  1. install bitwarden
+echo '  1. install bitwarden'
 echo '  2. via bitwarden, copy your SSH keys into ~/.ssh'
 echo '  3. chmod 600 ~/.ssh/* && chmod 700 ~/.ssh'
 echo '  4. RESTART'
