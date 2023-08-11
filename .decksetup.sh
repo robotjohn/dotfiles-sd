@@ -62,6 +62,7 @@ systemctl --user status podman.socket
 # pip3 install podman-compose
 # pip3 install git+https://github.com/containers/podman-compose.git@devel
 
+
 # https://github.com/containers/podman/issues/11822#issuecomment-932289679
 pip3 install docker-compose==1.29.2
 
@@ -69,17 +70,17 @@ pip3 install docker-compose==1.29.2
 flatpak update -y
 flatpak install -y org.chromium.Chromium
 flatpak install -y com.visualstudio.code
-flatpak install -y org.godotengine.Godot
-xdg-settings set default-web-browser org.chromium.Chromium.desktop
+# flatpak install -y org.godotengine.Godot
+# xdg-settings set default-web-browser org.chromium.Chromium.desktop
 
 # install vscode extensions
 export $(dbus-launch)
 flatpak run --branch=stable --arch=x86_64 --command=code --file-forwarding com.visualstudio.code --reuse-window --install-extension ms-vscode-remote.remote-containers
 
 # download NordVPN's openvpn configs
-mkdir -p ~/ovpn
-sudo curl https://downloads.nordcdn.com/configs/archives/servers/ovpn.zip --output /tmp/ovpn.zip
-unzip -q -o /tmp/ovpn.zip -d ~/ovpn
+# mkdir -p ~/ovpn
+# sudo curl https://downloads.nordcdn.com/configs/archives/servers/ovpn.zip --output /tmp/ovpn.zip
+# unzip -q -o /tmp/ovpn.zip -d ~/ovpn
 
 # uncomment to auto-open bitwarden install URL
 # xdg-open https://chrome.google.com/webstore/detail/bitwarden-free-password-m/nngceckbapebfimnlniiiahkandclblb?hl=en
@@ -93,26 +94,19 @@ mkdir -p ~/code ~/test
 systemctl --user enable --now ssh-agent
 
 # configure git
-git config --global user.name "Hunter Loftis"
-git config --global user.email hunter@hunterloftis.com
+git config --global user.name "John Berube"
+git config --global user.email john@robotjohn.com
 git config --global core.editor "nano"
 git config --global pull.ff only
-
-# TODO: load a KDE hotkey config file (with swapped ctrl + alt and other things)
-# TODO: load a KDE keyboard repeat speed config
-# TODO: load a KDE fx (wobbly windows etc) config
 
 set +x
 echo
 echo
 echo 'Next:'
 echo
-echo '  1. install bitwarden: https://chrome.google.com/webstore/detail/bitwarden-free-password-m/nngceckbapebfimnlniiiahkandclblb?hl=en'
+echo '  1. install bitwarden
 echo '  2. via bitwarden, copy your SSH keys into ~/.ssh'
 echo '  3. chmod 600 ~/.ssh/* && chmod 700 ~/.ssh'
-echo '  4. open network connection settings and add a new VPN connection using a file in ~/ovpn/udp'
-echo '  5. open settings and load shortcuts from ~/shortcuts.kksrc'
-echo '  6. other settings: wobbly windows, keyboard repeat speed'
-echo '  7. RESTART'
+echo '  4. RESTART'
 echo
 
