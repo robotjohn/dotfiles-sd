@@ -1,5 +1,7 @@
 # Steam Deck Dev Machine dotfiles
 
+## Forked from [hunterloftis](https://github.com/hunterloftis)/[dotfiles](https://github.com/hunterloftis/dotfiles) but modified for my use.
+
 Dotfiles to unlock general development capabilities on a Steam Deck.
 
 - Keeps SteamOS's read-only mode & stability
@@ -45,7 +47,7 @@ git config --global init.defaultBranch main
 git init --bare ~/.dotfiles
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 dotfiles config status.showUntrackedFiles no
-dotfiles remote add origin https://github.com/hunterloftis/dotfiles.git
+dotfiles remote add origin https://github.com/robotjohn/dotfiles-sd.git
 dotfiles fetch --all
 dotfiles reset --hard origin/main
 passwd # choose a password for sudoing on your deck
